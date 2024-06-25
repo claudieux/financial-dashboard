@@ -132,4 +132,21 @@ const Dashboard = () => {
             </div>
             <div className="text-center">
               <p className="text-lg font-semibold text-yellow-600">Costuri Marketing</p>
-              <p className="text-2xl font-bold
+              <p className="text-2xl font-bold">{costuriEffectiveMarketing.toLocaleString()} €</p>
+            </div>
+          </div>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={chartData}>
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Bar dataKey="value" fill="#8884d8" />
+            </BarChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+
+export default Dashboard;
